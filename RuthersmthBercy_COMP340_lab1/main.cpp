@@ -1,4 +1,4 @@
-#include "header.h"
+#include "AddressBook.h"
 
 int main(){
 
@@ -19,27 +19,27 @@ int main(){
 		if(user.compare("1") == 0 ){
 
 			string name, phone, address;
+
 			std::cout << "please type in the name" <<endl;
-			//std::cin >> name;
 			getline(std::cin, name);
-			std::cout << "please type in the phone number" <<endl;
-			//std::cin >> phone;
-			getline(std::cin, phone);
-			std::cout << "please type in the address" <<endl;
-			//std::cin >> address;
-			getline(std::cin, address);
 			
+			std::cout << "please type in the phone number" <<endl;
+			getline(std::cin, phone);
+			
+			std::cout << "please type in the address" <<endl;
+			getline(std::cin, address);
+		
 			addressBook.addEntry(name,phone,address);	
 			
 		}
 
 		if (user.compare("2") == 0 ){
-			//addressBook.printAddressBook();
+			addressBook.printAddressBook();
 		}
 
 		/*if (user == 3) {
 			std::string name;
-			std::cin >> name;
+			std::cin >> name; 
 			//addressBook.searchAddressBook(name);
 		}*/
 		
