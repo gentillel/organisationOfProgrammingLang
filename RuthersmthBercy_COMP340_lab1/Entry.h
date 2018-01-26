@@ -6,9 +6,9 @@ using namespace std;
 class Entry{
 
 	private:
-	string name;
-	string phoneNumber;
-	string address;
+	std::string name;
+	std::string phoneNumber;
+	std::string address;
 	
 	public:
 	Entry(std::string n, std::string pn, std::string a){
@@ -16,14 +16,14 @@ class Entry{
 		phoneNumber = pn;
 		address = a;
 	}
-
+	//print the information stored in the entry, ie: name, phoneNumber and address
 	void print(){
-		std::cout << "name: " << name <<endl;
-		std::cout << "phone number: " << phoneNumber <<endl;
-		std::cout << "address: " << address <<endl;
-		std::cout << endl;
+		std::cout << "name: " << name <<std::endl;
+		std::cout << "phone number: " << phoneNumber <<std::endl;
+		std::cout << "address: " << address <<std::endl;
+		std::cout << std::endl;
 	}
-
+	// returns the name for searching purpose
 	std::string getName(){
 		return name;
 	}

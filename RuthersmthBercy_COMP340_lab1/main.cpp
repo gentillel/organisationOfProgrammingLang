@@ -1,3 +1,8 @@
+/* write an address book program with an entry class
+   that store each entries information, the address book class itself
+   and a main to handle user input;
+*/
+
 #include "AddressBook.h"
 
 int main(){
@@ -5,10 +10,10 @@ int main(){
 	//int user;
 	AddressBook addressBook;
 
-	std::cout << "type 1 to create a new entry" <<endl;
-	std::cout << "type 2 to print the addressBook" <<endl;
-	std::cout << "type 3 to search for some one" <<endl;
-	std::cout << "type 4 to quit" <<endl;
+	std::cout << "type 1 to create a new entry" <<std::endl;
+	std::cout << "type 2 to print the addressBook" <<std::endl;
+	std::cout << "type 3 to search for some one" <<std::endl;
+	std::cout << "type 4 to quit" <<std::endl;
 
 	std::string user;
 	getline(std::cin, user);
@@ -20,15 +25,15 @@ int main(){
 
 		if(user.compare("1") == 0 ){
 
-			string name, phone, address;
+			std::string name, phone, address;
 
-			std::cout << "please type in the name" <<endl;
+			std::cout << "please type in the name" <<std::endl;
 			getline(std::cin, name);
 			
-			std::cout << "please type in the phone number" <<endl;
+			std::cout << "please type in the phone number" <<std::endl;
 			getline(std::cin, phone);
 			
-			std::cout << "please type in the address" <<endl;
+			std::cout << "please type in the address" <<std::endl;
 			getline(std::cin, address);
 		
 			addressBook.addEntry(name,phone,address);	
@@ -41,13 +46,13 @@ int main(){
 
 		if (user.compare("3") == 0) {
 			std::string name;
-			std::cout << "what is the name you are searching for:" << endl;
+			std::cout << "what is the name you are searching for:" <<std::endl;
 			getline(std::cin, name); 
 			addressBook.searchAddressBook(name);
 		}
 		
 		std::cout << endl;
-		std::cout << "choose a menu option" <<endl;
+		std::cout << "choose a menu option" <<std::endl;
 		getline(std::cin, user);	
 
 	}
