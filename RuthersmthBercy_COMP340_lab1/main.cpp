@@ -16,6 +16,8 @@ int main(){
 	
 	while (user.compare("4") != 0 ){
 
+		std::cout <<std::endl;		
+
 		if(user.compare("1") == 0 ){
 
 			string name, phone, address;
@@ -37,15 +39,16 @@ int main(){
 			addressBook.printAddressBook();
 		}
 
-		/*if (user == 3) {
+		if (user.compare("3") == 0) {
 			std::string name;
-			std::cin >> name; 
-			//addressBook.searchAddressBook(name);
-		}*/
+			std::cout << "what is the name you are searching for:" << endl;
+			getline(std::cin, name); 
+			addressBook.searchAddressBook(name);
+		}
 		
 		std::cout << endl;
 		std::cout << "choose a menu option" <<endl;
-		std::cin >> user;	
+		getline(std::cin, user);	
 
 	}
 

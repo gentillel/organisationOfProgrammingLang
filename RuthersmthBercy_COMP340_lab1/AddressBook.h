@@ -29,11 +29,16 @@ class AddressBook{
 
 	void searchAddressBook(std::string name){
 
-		for(Entry* e : entries){
-			//if (name.compare(e->getName() ==0)){
-			//	e ->print();
-			//}
+		list<Entry*>::iterator it;
+
+		for(it = entries.begin(); it != entries.end(); it++){
+		
+			if ((*it)->getName().compare(name) == 0){
+				(*it)->print();
+				return;
+			}
 		}
+		std::cout << "No such name exist" <<std::endl;
 	}
 
 };
